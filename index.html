@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Polaroidy</title>
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function Randomize(){
+            let el = ["#one", "#two", "#three"];
+            for(let i = 0; i < el.length; i++){
+                let v = Math.floor(Math.random() * 30 + 1);
+                v *= v >=15 ? 1 : -1;
+                document.querySelector(el[i]).style.setProperty("--rot", v + "deg");
+            }
+        }
+    </script>
+</head>
+<body onload="Randomize()">
+    <div class="wrapper">
+        <figure class="rotation" id="one">
+            <img src="https://images.theconversation.com/files/405990/original/file-20210611-13-pcdwbd.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop">
+            <div class="txtd">
+                <figcaption>Starry night</figcaption>
+            </div>
+        </figure>
+        <figure class="rotation" id="two">
+            <img src="https://assets.newatlas.com/dims4/default/12ea819/2147483647/strip/true/crop/1035x1080+0+0/resize/920x960!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Farchive%2Fglycine-space-2.jpg">
+            <div class="txtd">
+                <figcaption>Nebula</figcaption>
+            </div>
+        </figure>
+
+        <figure class="rotation" id="three">
+            <img src="https://3dnt1v3k447t3upsp9225kz7-wpengine.netdna-ssl.com/wp-content/uploads/2021/09/nasa-Q1p7bh3SHj8-unsplash-3-424x424.jpg">
+            <div class="txtd">
+                <figcaption>Earth from space</figcaption>
+            </div>
+        </figure>
+
+    </div>
+</body>
+</html>
